@@ -18,6 +18,7 @@ namespace CapaPresentacion
             InitializeComponent();
             dtgvClientes.CellValueChanged += dtgvClientes_CellValueChanged; // Detectar cambios en celdas
             CargarClientes(); // Cargar datos al iniciar el formulario
+            txtIdCliente.Enabled = false;
         }
         // Método para cargar la lista de clientes en el DataGridView
         private void CargarClientes()
@@ -160,7 +161,8 @@ namespace CapaPresentacion
                 logCliente.Instancia.InsertaCliente(nuevoCliente);
                 MessageBox.Show("Cliente agregado correctamente.");
                 CargarClientes();
-                LimpiarCampos();
+                //LimpiarCampos();
+                limpiarCampos2();
             }
             catch (Exception ex)
             {
@@ -249,6 +251,16 @@ namespace CapaPresentacion
         private void txtIdCliente_TextChanged(object sender, EventArgs e)
         {
             txtIdCliente.Enabled = false;
+        }
+
+        private void limpiarCampos2()
+        {
+            txtNombreCliente.Text = string.Empty;
+            txtDniCliente.Text = string.Empty;
+            txtCorreoCliente.Text = string.Empty;
+            txtNumeroCliente.Text = string.Empty;
+            chkEstadoCliente.Checked = false;
+         
         }
     }
 }
