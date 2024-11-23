@@ -169,7 +169,7 @@
             this.dtgvRegistroIngresoInsumo.Name = "dtgvRegistroIngresoInsumo";
             this.dtgvRegistroIngresoInsumo.RowHeadersWidth = 51;
             this.dtgvRegistroIngresoInsumo.RowTemplate.Height = 24;
-            this.dtgvRegistroIngresoInsumo.Size = new System.Drawing.Size(541, 251);
+            this.dtgvRegistroIngresoInsumo.Size = new System.Drawing.Size(541, 287);
             this.dtgvRegistroIngresoInsumo.TabIndex = 57;
             // 
             // button1
@@ -273,7 +273,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(505, 375);
+            this.dataGridView1.Location = new System.Drawing.Point(505, 403);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(541, 296);
             this.dataGridView1.TabIndex = 67;
