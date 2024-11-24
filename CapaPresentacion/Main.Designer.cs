@@ -88,7 +88,6 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(208, 478);
             this.MenuVertical.TabIndex = 39;
-            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
             // 
             // btnregistroalmacen
             // 

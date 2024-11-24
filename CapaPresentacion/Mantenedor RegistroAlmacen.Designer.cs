@@ -71,7 +71,6 @@
             this.pcbxFondoMadera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbxFondoMadera.TabIndex = 31;
             this.pcbxFondoMadera.TabStop = false;
-            this.pcbxFondoMadera.Click += new System.EventHandler(this.pcbxFondoMadera_Click);
             this.pcbxFondoMadera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pcbxFondoMadera_MouseDown);
             // 
             // label7
@@ -174,7 +173,7 @@
             this.label2.Size = new System.Drawing.Size(92, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Almacenista:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+
             // 
             // label1
             // 

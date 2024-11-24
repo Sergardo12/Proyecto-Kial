@@ -248,11 +248,6 @@ namespace CapaPresentacion
             dtgvClientes.AllowUserToAddRows = false;
         }
 
-        private void txtDniCliente_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void txtIdCliente_TextChanged(object sender, EventArgs e)
         {
             txtIdCliente.Enabled = false;

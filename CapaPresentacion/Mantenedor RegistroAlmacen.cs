@@ -92,19 +92,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("No hay cambios para registrar.");
             }
-        }
-
-        private void pcbxFondoMadera_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
- 
-        
+        } 
     }
 }

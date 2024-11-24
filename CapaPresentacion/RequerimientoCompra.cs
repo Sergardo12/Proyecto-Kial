@@ -94,14 +94,5 @@ namespace CapaPresentacion
             }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpkInsumo_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

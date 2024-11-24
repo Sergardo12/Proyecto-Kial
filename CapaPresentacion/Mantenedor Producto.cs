@@ -145,12 +145,6 @@ namespace CapaPresentacion
                 AbrirFormularioUnico(typeof(Main));
                 this.Close(); // Cierra la vista actual
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dtgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             dtgvProducto.ReadOnly = true; // Solo lectura para evitar modificaciones directas

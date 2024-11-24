@@ -170,7 +170,6 @@
             this.label1.Size = new System.Drawing.Size(234, 40);
             this.label1.TabIndex = 51;
             this.label1.Text = "Nuevo Producto";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 

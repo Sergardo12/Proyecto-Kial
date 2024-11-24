@@ -96,7 +96,6 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(221, 22);
             this.txtContraseña.TabIndex = 4;
-            this.txtContraseña.TextChanged += new System.EventHandler(this.txtContraseña_TextChanged);
             // 
             // pcbxContraseña
             // 
@@ -117,7 +116,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(221, 22);
             this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // pcbxUsuario
             // 

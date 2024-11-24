@@ -57,10 +57,6 @@ namespace CapaPresentacion
             chkEstadoInsumo.Checked = true;
         }
 
-        private void pcbxFondoMadera_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnListoInsumo_Click(object sender, EventArgs e)
         {

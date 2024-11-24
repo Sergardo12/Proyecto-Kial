@@ -145,7 +145,6 @@
             this.txtDniCliente.Name = "txtDniCliente";
             this.txtDniCliente.Size = new System.Drawing.Size(183, 26);
             this.txtDniCliente.TabIndex = 7;
-            this.txtDniCliente.TextChanged += new System.EventHandler(this.txtDniCliente_TextChanged);
             // 
             // txtNombreCliente
             // 

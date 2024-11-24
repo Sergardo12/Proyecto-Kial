@@ -62,7 +62,6 @@
             this.pcbxFondoMadera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbxFondoMadera.TabIndex = 33;
             this.pcbxFondoMadera.TabStop = false;
-            this.pcbxFondoMadera.Click += new System.EventHandler(this.pcbxFondoMadera_Click);
             // 
             // btnListoInsumo
             // 

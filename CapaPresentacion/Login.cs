@@ -51,17 +51,6 @@ namespace CapaPresentacion
                 MessageBox.Show("Correo o contraseña incorrectos. Inténtalo de nuevo.");
             }
         }
-
-        private void txtContraseña_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

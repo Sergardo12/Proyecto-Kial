@@ -54,10 +54,6 @@ namespace CapaPresentacion
             }
         }
 
-        private void MenuVertical_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnrequerimientocompra_Click(object sender, EventArgs e)
         {
