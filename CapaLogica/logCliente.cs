@@ -42,7 +42,7 @@ namespace CapaLogica
         {
             // Validaciones adicionales antes de insertar
             // Verificar que razonSocial no esté vacío y que dni sea un número positivo
-            if (string.IsNullOrEmpty(cliente.razonSocial))
+            if (string.IsNullOrEmpty(cliente.nombreCliente))
             {
                 throw new ArgumentException("La razón social no puede estar vacía.");
             }
@@ -72,7 +72,7 @@ namespace CapaLogica
             {
                 throw new ArgumentException("El ID del cliente debe ser válido.");
             }
-            if (string.IsNullOrEmpty(cliente.razonSocial))
+            if (string.IsNullOrEmpty(cliente.nombreCliente))
             {
                 throw new ArgumentException("La razón social no puede estar vacía.");
             }
