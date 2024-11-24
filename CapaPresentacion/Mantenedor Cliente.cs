@@ -18,6 +18,7 @@ namespace CapaPresentacion
             InitializeComponent();
             dtgvClientes.CellValueChanged += dtgvClientes_CellValueChanged; // Detectar cambios en celdas
             CargarClientes(); // Cargar datos al iniciar el formulario
+            txtIdCliente.Enabled = false;
         }
         // Método para cargar la lista de clientes en el DataGridView
         private void CargarClientes()
@@ -161,6 +162,7 @@ namespace CapaPresentacion
                 MessageBox.Show("Cliente agregado correctamente.");
                 CargarClientes();
                 LimpiarCampos();
+                limpiarCampos2();
             }
             catch (Exception ex)
             {
@@ -172,6 +174,7 @@ namespace CapaPresentacion
         {
             try
             {
+                txtIdCliente.Enabled = true;
                 if (!int.TryParse(txtIdCliente.Text, out int idCliente))
                 {
                     MessageBox.Show("Debe ingresar un ID válido para editar.");
@@ -204,7 +207,9 @@ namespace CapaPresentacion
                 logCliente.Instancia.EditaCliente(clienteModificado);
                 MessageBox.Show("Cliente modificado correctamente.");
                 CargarClientes();
-                LimpiarCampos();
+                //LimpiarCampos();
+                limpiarCampos2();
+                txtIdCliente.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -219,6 +224,7 @@ namespace CapaPresentacion
             {
                 if (!int.TryParse(txtIdCliente.Text, out int idCliente))
                 {
+                    txtIdCliente.Enabled = true;
                     MessageBox.Show("Debe ingresar un ID válido para inhabilitar.");
                     return;
                 }
@@ -226,7 +232,8 @@ namespace CapaPresentacion
                 logCliente.Instancia.DeshabilitarCliente(idCliente);
                 MessageBox.Show("Cliente inhabilitado correctamente.");
                 CargarClientes();
-                LimpiarCampos();
+                //LimpiarCampos();
+                limpiarCampos2();
             }
             catch (Exception ex)
             {
@@ -249,6 +256,17 @@ namespace CapaPresentacion
         private void txtIdCliente_TextChanged(object sender, EventArgs e)
         {
             txtIdCliente.Enabled = false;
+        }
+
+        private void limpiarCampos2()
+        {
+            txtNombreCliente.Text = string.Empty;
+            txtDniCliente.Text = string.Empty;
+            txtCorreoCliente.Text = string.Empty;
+            txtNumeroCliente.Text = string.Empty;
+            chkEstadoCliente.Checked = false;
+            txtIdCliente.Text = string.Empty;
+         
         }
     }
 }
