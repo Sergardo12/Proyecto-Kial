@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="logCliente.cs" />
     <Compile Include="logComprobante.cs" />
+    <Compile Include="logInsumo.cs" />
     <Compile Include="logOrden.cs" />
     <Compile Include="logProducto.cs" />
     <Compile Include="logProveedor.cs" />

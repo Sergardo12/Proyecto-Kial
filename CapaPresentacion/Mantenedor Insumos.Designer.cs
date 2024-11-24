@@ -39,12 +39,12 @@
             this.dtgvInsumo = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chkEstadoProducto = new System.Windows.Forms.CheckBox();
-            this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.txtIdProducto = new System.Windows.Forms.TextBox();
+            this.chkEstadoInsumo = new System.Windows.Forms.CheckBox();
+            this.txtNombreInsumo = new System.Windows.Forms.TextBox();
+            this.txtIdInsumo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUnidadMedidaInsumo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbxFondoMadera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvInsumo)).BeginInit();
@@ -118,6 +118,7 @@
             this.btnInhabilitarInsumo.TabIndex = 64;
             this.btnInhabilitarInsumo.Text = "Inhabilitar";
             this.btnInhabilitarInsumo.UseVisualStyleBackColor = false;
+            this.btnInhabilitarInsumo.Click += new System.EventHandler(this.btnInhabilitarInsumo_Click);
             // 
             // btnEditarInsumo
             // 
@@ -131,6 +132,7 @@
             this.btnEditarInsumo.TabIndex = 63;
             this.btnEditarInsumo.Text = "Modificar";
             this.btnEditarInsumo.UseVisualStyleBackColor = false;
+            this.btnEditarInsumo.Click += new System.EventHandler(this.btnEditarInsumo_Click);
             // 
             // btnAgregarInsumo
             // 
@@ -144,6 +146,7 @@
             this.btnAgregarInsumo.TabIndex = 62;
             this.btnAgregarInsumo.Text = "Agregar";
             this.btnAgregarInsumo.UseVisualStyleBackColor = false;
+            this.btnAgregarInsumo.Click += new System.EventHandler(this.btnAgregarInsumo_Click);
             // 
             // dtgvInsumo
             // 
@@ -171,11 +174,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtUnidadMedidaInsumo);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.chkEstadoProducto);
-            this.groupBox1.Controls.Add(this.txtNombreProducto);
-            this.groupBox1.Controls.Add(this.txtIdProducto);
+            this.groupBox1.Controls.Add(this.chkEstadoInsumo);
+            this.groupBox1.Controls.Add(this.txtNombreInsumo);
+            this.groupBox1.Controls.Add(this.txtIdInsumo);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -188,31 +191,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insumo:";
             // 
-            // chkEstadoProducto
+            // chkEstadoInsumo
             // 
-            this.chkEstadoProducto.AutoSize = true;
-            this.chkEstadoProducto.Location = new System.Drawing.Point(184, 177);
-            this.chkEstadoProducto.Name = "chkEstadoProducto";
-            this.chkEstadoProducto.Size = new System.Drawing.Size(79, 24);
-            this.chkEstadoProducto.TabIndex = 59;
-            this.chkEstadoProducto.Text = "Estado";
-            this.chkEstadoProducto.UseVisualStyleBackColor = true;
+            this.chkEstadoInsumo.AutoSize = true;
+            this.chkEstadoInsumo.Location = new System.Drawing.Point(184, 177);
+            this.chkEstadoInsumo.Name = "chkEstadoInsumo";
+            this.chkEstadoInsumo.Size = new System.Drawing.Size(79, 24);
+            this.chkEstadoInsumo.TabIndex = 59;
+            this.chkEstadoInsumo.Text = "Estado";
+            this.chkEstadoInsumo.UseVisualStyleBackColor = true;
             // 
-            // txtNombreProducto
+            // txtNombreInsumo
             // 
-            this.txtNombreProducto.Location = new System.Drawing.Point(184, 88);
-            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Size = new System.Drawing.Size(183, 26);
-            this.txtNombreProducto.TabIndex = 6;
+            this.txtNombreInsumo.Location = new System.Drawing.Point(184, 88);
+            this.txtNombreInsumo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreInsumo.Name = "txtNombreInsumo";
+            this.txtNombreInsumo.Size = new System.Drawing.Size(183, 26);
+            this.txtNombreInsumo.TabIndex = 6;
             // 
-            // txtIdProducto
+            // txtIdInsumo
             // 
-            this.txtIdProducto.Location = new System.Drawing.Point(184, 46);
-            this.txtIdProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdProducto.Name = "txtIdProducto";
-            this.txtIdProducto.Size = new System.Drawing.Size(183, 26);
-            this.txtIdProducto.TabIndex = 5;
+            this.txtIdInsumo.Location = new System.Drawing.Point(184, 46);
+            this.txtIdInsumo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdInsumo.Name = "txtIdInsumo";
+            this.txtIdInsumo.Size = new System.Drawing.Size(183, 26);
+            this.txtIdInsumo.TabIndex = 5;
             // 
             // label3
             // 
@@ -234,12 +237,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "ID:";
             // 
-            // textBox1
+            // txtUnidadMedidaInsumo
             // 
-            this.textBox1.Location = new System.Drawing.Point(185, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 26);
-            this.textBox1.TabIndex = 61;
+            this.txtUnidadMedidaInsumo.Location = new System.Drawing.Point(185, 135);
+            this.txtUnidadMedidaInsumo.Name = "txtUnidadMedidaInsumo";
+            this.txtUnidadMedidaInsumo.Size = new System.Drawing.Size(183, 26);
+            this.txtUnidadMedidaInsumo.TabIndex = 61;
             // 
             // label4
             // 
@@ -290,12 +293,12 @@
         private System.Windows.Forms.DataGridView dtgvInsumo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox chkEstadoProducto;
-        private System.Windows.Forms.TextBox txtNombreProducto;
-        private System.Windows.Forms.TextBox txtIdProducto;
+        private System.Windows.Forms.CheckBox chkEstadoInsumo;
+        private System.Windows.Forms.TextBox txtNombreInsumo;
+        private System.Windows.Forms.TextBox txtIdInsumo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtUnidadMedidaInsumo;
         private System.Windows.Forms.Label label4;
     }
 }

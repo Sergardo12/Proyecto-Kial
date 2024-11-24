@@ -1,4 +1,5 @@
-﻿using CapaLogica;
+﻿using CapaEntidad;
+using CapaLogica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace CapaPresentacion
         public Mantenedor_Insumos()
         {
             InitializeComponent();
-            chkEstadoProducto.Checked = true; // Estado activo por defecto
+            chkEstadoInsumo.Checked = true; // Estado activo por defecto
             CargarProductos();       // Cargar datos al iniciar el formulario
         }
 
@@ -40,13 +41,20 @@ namespace CapaPresentacion
         {
             try
             {
-                dtgvInsumo.DataSource = logProducto.Instancia.ListarProductos();
+                dtgvInsumo.DataSource = logInsumo.Instancia.ListarInsumo();
                 dtgvInsumo.Columns["estado"].Visible = true; // Ocultar columna si no es necesaria
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cargar insumo: " + ex.Message);
             }
+        }
+        private void LimpiarCampos()
+        {
+            txtIdInsumo.Clear();
+            txtNombreInsumo.Clear();
+            txtUnidadMedidaInsumo.Clear();
+            chkEstadoInsumo.Checked = true;
         }
 
         private void pcbxFondoMadera_Click(object sender, EventArgs e)
@@ -72,6 +80,66 @@ namespace CapaPresentacion
             // Si no hay cambios, regresa a la vista Main
             AbrirFormularioUnico(typeof(Main));
             this.Close(); // Cierra la vista actual
+        }
+
+        private void btnAgregarInsumo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entInsumo insumo = new entInsumo
+                {
+                    nombre = txtNombreInsumo.Text.Trim(),
+                    medida = txtUnidadMedidaInsumo.Text.Trim(),
+                    estado = true // Estado activo por defecto
+                };
+
+                logInsumo.Instancia.InsertarInsumo(insumo);
+                MessageBox.Show("Insumo agregado correctamente.");
+                CargarProductos(); // Refresca la lista
+                LimpiarCampos(); // Limpia los campos
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar insumo: " + ex.Message);
+            }
+        }
+
+        private void btnEditarInsumo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entInsumo insumoModificado = new entInsumo
+                {
+                    idInsumo = int.Parse(txtIdInsumo.Text),
+                    nombre = txtNombreInsumo.Text.Trim(),
+                    medida = txtUnidadMedidaInsumo.Text.Trim(),
+                };
+
+                logInsumo.Instancia.ModificarInsumo(insumoModificado);
+                MessageBox.Show("Insumo modificado correctamente.");
+                CargarProductos();
+                LimpiarCampos(); // Limpia los campos
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar insumo: " + ex.Message);
+            }
+        }
+
+        private void btnInhabilitarInsumo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idInsumo = int.Parse(txtIdInsumo.Text);
+                logInsumo.Instancia.InhabilitarInsumo(idInsumo);
+                MessageBox.Show("Insumo inhabilitado correctamente.");
+                CargarProductos();
+                LimpiarCampos(); // Limpia los campos
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al inhabilitar insumo: " + ex.Message);
+            }
         }
     }
 }
