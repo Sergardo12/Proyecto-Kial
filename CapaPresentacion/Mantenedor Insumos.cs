@@ -141,5 +141,10 @@ namespace CapaPresentacion
                 MessageBox.Show("Error al inhabilitar insumo: " + ex.Message);
             }
         }
+
+
+
+
+
     }
 }
