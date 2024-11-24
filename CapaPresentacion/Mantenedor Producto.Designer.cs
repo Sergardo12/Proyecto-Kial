@@ -62,6 +62,7 @@
             this.pcbxFondoMadera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbxFondoMadera.TabIndex = 32;
             this.pcbxFondoMadera.TabStop = false;
+            this.pcbxFondoMadera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pcbxFondoMadera_MouseDown);
             // 
             // btnListoProducto
             // 
@@ -196,7 +197,7 @@
             this.chkEstadoProducto.AutoSize = true;
             this.chkEstadoProducto.Location = new System.Drawing.Point(183, 176);
             this.chkEstadoProducto.Name = "chkEstadoProducto";
-            this.chkEstadoProducto.Size = new System.Drawing.Size(79, 24);
+            this.chkEstadoProducto.Size = new System.Drawing.Size(95, 29);
             this.chkEstadoProducto.TabIndex = 59;
             this.chkEstadoProducto.Text = "Estado";
             this.chkEstadoProducto.UseVisualStyleBackColor = true;
@@ -270,7 +271,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pcbxFondoMadera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Mantenedor_Producto";
             this.Text = "Mantenedor_Producto";
             ((System.ComponentModel.ISupportInitialize)(this.pcbxFondoMadera)).EndInit();

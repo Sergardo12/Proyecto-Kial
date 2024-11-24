@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,11 @@ namespace CapaPresentacion
 {
     public partial class MantenedorComprobanteDeVenta : Form
     {
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private bool cambiosRealizados = false; // Indicador de cambios en dtgv
         public MantenedorComprobanteDeVenta()
         {
@@ -249,6 +255,13 @@ namespace CapaPresentacion
                 // Manejo de errores
                 MessageBox.Show("Error al redireccionar al Mantenedor de Cliente: " + ex.Message);
             }
+        }
+
+        private void pcbxFondoMadera_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+
         }
     }
 }
