@@ -54,6 +54,7 @@ namespace CapaPresentacion
         {
             txtIdProducto.Clear();
             txtNombreProducto.Clear();
+            txtCantidadProducto.Clear();
             txtPrecioProducto.Clear();
             chkEstadoProducto.Checked = true;
         }

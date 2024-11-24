@@ -59,7 +59,6 @@ namespace CapaPresentacion
         private void LimpiarCampos()
         {
             txtNombreProveedor.Text = "";
-            txtTelefonoProveedor.Text = "";
             txtRUCProveedor.Text = "";
             txtDireccionProveedor.Text = "";
             dtpProveedor.Value = DateTime.Today;
@@ -124,10 +123,9 @@ namespace CapaPresentacion
             {
                 entProveedor proveedor = new entProveedor
                 {
-                    nombre = txtNombreProveedor.Text,
-                    telefono = int.Parse(txtTelefonoProveedor.Text),
-                    ruc = int.Parse(txtRUCProveedor.Text),
-                    direccion = txtDireccionProveedor.Text,
+                    nombreProveedor = txtNombreProveedor.Text,
+                    rucProveedor = int.Parse(txtRUCProveedor.Text),
+                    direccionProveedor = txtDireccionProveedor.Text,
                     fecRegProveedor = dtpProveedor.Value,
                     estProveedor = cbxEstadoProveedor.Checked
                 };
@@ -150,10 +148,9 @@ namespace CapaPresentacion
                 entProveedor proveedor = new entProveedor
                 {
                     idProveedor = int.Parse(txtIDProveedor.Text),
-                    nombre = txtNombreProveedor.Text,
-                    telefono = int.Parse(txtTelefonoProveedor.Text),
-                    ruc = int.Parse(txtRUCProveedor.Text),
-                    direccion = txtDireccionProveedor.Text,
+                    nombreProveedor = txtNombreProveedor.Text,
+                    rucProveedor = int.Parse(txtRUCProveedor.Text),
+                    direccionProveedor = txtDireccionProveedor.Text,
                     fecRegProveedor = dtpProveedor.Value,
                     estProveedor = cbxEstadoProveedor.Checked
                 };

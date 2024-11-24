@@ -55,10 +55,10 @@
             // 
             this.pcbxFondoMadera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pcbxFondoMadera.Image = ((System.Drawing.Image)(resources.GetObject("pcbxFondoMadera.Image")));
-            this.pcbxFondoMadera.Location = new System.Drawing.Point(-9, -6);
-            this.pcbxFondoMadera.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.pcbxFondoMadera.Location = new System.Drawing.Point(-12, -7);
+            this.pcbxFondoMadera.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.pcbxFondoMadera.Name = "pcbxFondoMadera";
-            this.pcbxFondoMadera.Size = new System.Drawing.Size(1208, 496);
+            this.pcbxFondoMadera.Size = new System.Drawing.Size(1609, 610);
             this.pcbxFondoMadera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbxFondoMadera.TabIndex = 32;
             this.pcbxFondoMadera.TabStop = false;
@@ -68,10 +68,10 @@
             this.btnListoProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(54)))));
             this.btnListoProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListoProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnListoProducto.Location = new System.Drawing.Point(1060, 413);
-            this.btnListoProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnListoProducto.Location = new System.Drawing.Point(1413, 508);
+            this.btnListoProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnListoProducto.Name = "btnListoProducto";
-            this.btnListoProducto.Size = new System.Drawing.Size(93, 37);
+            this.btnListoProducto.Size = new System.Drawing.Size(124, 46);
             this.btnListoProducto.TabIndex = 58;
             this.btnListoProducto.Text = "Listo";
             this.btnListoProducto.UseVisualStyleBackColor = false;
@@ -82,10 +82,10 @@
             this.btnCancelarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.btnCancelarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelarProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCancelarProducto.Location = new System.Drawing.Point(949, 413);
-            this.btnCancelarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelarProducto.Location = new System.Drawing.Point(1265, 508);
+            this.btnCancelarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelarProducto.Name = "btnCancelarProducto";
-            this.btnCancelarProducto.Size = new System.Drawing.Size(93, 37);
+            this.btnCancelarProducto.Size = new System.Drawing.Size(124, 46);
             this.btnCancelarProducto.TabIndex = 57;
             this.btnCancelarProducto.Text = "Cancelar";
             this.btnCancelarProducto.UseVisualStyleBackColor = false;
@@ -96,10 +96,10 @@
             this.btnRegresarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(147)))), ((int)(((byte)(54)))));
             this.btnRegresarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegresarProducto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegresarProducto.Location = new System.Drawing.Point(11, 413);
-            this.btnRegresarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegresarProducto.Location = new System.Drawing.Point(15, 508);
+            this.btnRegresarProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegresarProducto.Name = "btnRegresarProducto";
-            this.btnRegresarProducto.Size = new System.Drawing.Size(93, 37);
+            this.btnRegresarProducto.Size = new System.Drawing.Size(124, 46);
             this.btnRegresarProducto.TabIndex = 56;
             this.btnRegresarProducto.Text = "Regresar";
             this.btnRegresarProducto.UseVisualStyleBackColor = false;
@@ -110,10 +110,10 @@
             this.btnInhabilitarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(61)))), ((int)(((byte)(20)))));
             this.btnInhabilitarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInhabilitarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnInhabilitarCliente.Location = new System.Drawing.Point(312, 358);
-            this.btnInhabilitarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInhabilitarCliente.Location = new System.Drawing.Point(416, 441);
+            this.btnInhabilitarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInhabilitarCliente.Name = "btnInhabilitarCliente";
-            this.btnInhabilitarCliente.Size = new System.Drawing.Size(90, 40);
+            this.btnInhabilitarCliente.Size = new System.Drawing.Size(120, 49);
             this.btnInhabilitarCliente.TabIndex = 55;
             this.btnInhabilitarCliente.Text = "Inhabilitar";
             this.btnInhabilitarCliente.UseVisualStyleBackColor = false;
@@ -124,10 +124,10 @@
             this.btnEditarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(61)))), ((int)(((byte)(20)))));
             this.btnEditarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEditarCliente.Location = new System.Drawing.Point(218, 358);
-            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditarCliente.Location = new System.Drawing.Point(291, 441);
+            this.btnEditarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditarCliente.Name = "btnEditarCliente";
-            this.btnEditarCliente.Size = new System.Drawing.Size(90, 40);
+            this.btnEditarCliente.Size = new System.Drawing.Size(120, 49);
             this.btnEditarCliente.TabIndex = 54;
             this.btnEditarCliente.Text = "Modificar";
             this.btnEditarCliente.UseVisualStyleBackColor = false;
@@ -138,10 +138,10 @@
             this.btnAgregarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(61)))), ((int)(((byte)(20)))));
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(125, 358);
-            this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(167, 441);
+            this.btnAgregarCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(90, 40);
+            this.btnAgregarCliente.Size = new System.Drawing.Size(120, 49);
             this.btnAgregarCliente.TabIndex = 53;
             this.btnAgregarCliente.Text = "Agregar";
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
@@ -151,12 +151,12 @@
             // 
             this.dtgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvProducto.Enabled = false;
-            this.dtgvProducto.Location = new System.Drawing.Point(502, 67);
-            this.dtgvProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvProducto.Location = new System.Drawing.Point(669, 82);
+            this.dtgvProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvProducto.Name = "dtgvProducto";
             this.dtgvProducto.RowHeadersWidth = 51;
             this.dtgvProducto.RowTemplate.Height = 24;
-            this.dtgvProducto.Size = new System.Drawing.Size(540, 299);
+            this.dtgvProducto.Size = new System.Drawing.Size(720, 368);
             this.dtgvProducto.TabIndex = 52;
             this.dtgvProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvClientes_CellContentClick);
             // 
@@ -165,10 +165,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(399, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(532, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 31);
+            this.label1.Size = new System.Drawing.Size(234, 40);
             this.label1.TabIndex = 51;
             this.label1.Text = "Nuevo Producto";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -207,7 +206,7 @@
             // 
             this.txtPrecioProducto.Location = new System.Drawing.Point(184, 132);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
-            this.txtPrecioProducto.Size = new System.Drawing.Size(183, 26);
+            this.txtPrecioProducto.Size = new System.Drawing.Size(243, 30);
             this.txtPrecioProducto.TabIndex = 58;
             // 
             // label7
@@ -216,7 +215,7 @@
             this.label7.Location = new System.Drawing.Point(122, 135);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 20);
+            this.label7.Size = new System.Drawing.Size(73, 25);
             this.label7.TabIndex = 57;
             this.label7.Text = "Precio:";
             // 
@@ -225,7 +224,7 @@
             this.txtNombreProducto.Location = new System.Drawing.Point(184, 88);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Size = new System.Drawing.Size(183, 26);
+            this.txtNombreProducto.Size = new System.Drawing.Size(243, 30);
             this.txtNombreProducto.TabIndex = 6;
             // 
             // txtIdProducto
@@ -233,7 +232,7 @@
             this.txtIdProducto.Location = new System.Drawing.Point(184, 46);
             this.txtIdProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdProducto.Name = "txtIdProducto";
-            this.txtIdProducto.Size = new System.Drawing.Size(183, 26);
+            this.txtIdProducto.Size = new System.Drawing.Size(243, 30);
             this.txtIdProducto.TabIndex = 5;
             // 
             // label3
@@ -242,7 +241,7 @@
             this.label3.Location = new System.Drawing.Point(111, 91);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.Size = new System.Drawing.Size(87, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nombre:";
             // 
@@ -252,15 +251,15 @@
             this.label2.Location = new System.Drawing.Point(150, 49);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 20);
+            this.label2.Size = new System.Drawing.Size(37, 25);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID:";
             // 
             // Mantenedor_Producto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 485);
+            this.ClientSize = new System.Drawing.Size(1585, 597);
             this.Controls.Add(this.btnListoProducto);
             this.Controls.Add(this.btnCancelarProducto);
             this.Controls.Add(this.btnRegresarProducto);
@@ -272,6 +271,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pcbxFondoMadera);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Mantenedor_Producto";
             this.Text = "Mantenedor_Producto";
             ((System.ComponentModel.ISupportInitialize)(this.pcbxFondoMadera)).EndInit();

@@ -30,7 +30,7 @@ namespace CapaPresentacion
 
                 // Configuración de columnas
                 dtgvClientes.Columns["idCliente"].HeaderText = "ID Cliente";
-                dtgvClientes.Columns["razonSocial"].HeaderText = "Nombre del Cliente";
+                dtgvClientes.Columns["nombreCliente"].HeaderText = "Nombre del Cliente";
                 dtgvClientes.Columns["dni"].HeaderText = "DNI";
                 dtgvClientes.Columns["numero"].HeaderText = "Número";
                 dtgvClientes.Columns["correo"].HeaderText = "Correo Electrónico";
@@ -150,7 +150,7 @@ namespace CapaPresentacion
 
                 entCliente nuevoCliente = new entCliente
                 {
-                    razonSocial = txtNombreCliente.Text.Trim(),
+                    nombreCliente = txtNombreCliente.Text.Trim(),
                     dni = dni,
                     numero = numero,
                     correo = txtCorreoCliente.Text.Trim(),
@@ -196,7 +196,7 @@ namespace CapaPresentacion
                 entCliente clienteModificado = new entCliente
                 {
                     idCliente = idCliente,
-                    razonSocial = txtNombreCliente.Text.Trim(),
+                    nombreCliente = txtNombreCliente.Text.Trim(),
                     dni = dni,
                     numero = numero,
                     correo = txtCorreoCliente.Text.Trim(),
