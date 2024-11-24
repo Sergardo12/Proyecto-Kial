@@ -36,9 +36,9 @@ namespace CapaAccesoDatos
                         lista.Add(new entProducto
                         {
                             idProducto = Convert.ToInt32(dr["idProducto"]),
-                            nombre = dr["nombre"].ToString(),
-                            precio = Convert.ToDecimal(dr["precio"]),
-                            estado = Convert.ToBoolean(dr["estado"])
+                            nombreProducto = dr["nombreProducto"].ToString(),
+                            precioProducto = Convert.ToDecimal(dr["precioProducto"]),
+                            estadoProducto = Convert.ToBoolean(dr["estadoProducto"])
                         });
                     }
                 }
@@ -65,9 +65,9 @@ namespace CapaAccesoDatos
                         CommandType = CommandType.StoredProcedure
                     };
 
-                    cmd.Parameters.AddWithValue("@nombre", producto.nombre);
-                    cmd.Parameters.AddWithValue("@precio", producto.precio);
-                    cmd.Parameters.AddWithValue("@estado", producto.estado);
+                    cmd.Parameters.AddWithValue("@nombreProducto", producto.nombreProducto);
+                    cmd.Parameters.AddWithValue("@precioProducto", producto.precioProducto);
+                    cmd.Parameters.AddWithValue("@estadoProducto", producto.estadoProducto);
 
                     cn.Open();
                     cmd.ExecuteNonQuery();
@@ -94,8 +94,8 @@ namespace CapaAccesoDatos
                     };
 
                     cmd.Parameters.AddWithValue("@idProducto", producto.idProducto);
-                    cmd.Parameters.AddWithValue("@nombre", producto.nombre);
-                    cmd.Parameters.AddWithValue("@precio", producto.precio);
+                    cmd.Parameters.AddWithValue("@nombreProducto", producto.nombreProducto);
+                    cmd.Parameters.AddWithValue("@precioProducto", producto.precioProducto);
 
                     cn.Open();
                     cmd.ExecuteNonQuery();

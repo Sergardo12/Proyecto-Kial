@@ -9,8 +9,9 @@ namespace CapaEntidad
     public class entInsumo
     {
         public int idInsumo { get; set; }
-        public string nombre { get; set; }
-        public string medida { get; set; }
-        public bool estado { get; set; } // Para saber si está habilitado o inhabilitado
+        public string nombreInsumo { get; set; }
+        public int cantidadInsumo { get; set; }
+        public string medidaInsumo { get; set; }
+        public bool estadoInsumo { get; set; } // Para saber si está habilitado o inhabilitado
     }
 }

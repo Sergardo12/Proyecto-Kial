@@ -21,11 +21,11 @@ namespace CapaLogica
         // Insertar producto
         public void InsertarInsumo(entInsumo insumo)
         {
-            if (string.IsNullOrWhiteSpace(insumo.nombre))
+            if (string.IsNullOrWhiteSpace(insumo.nombreInsumo))
             {
                 throw new ArgumentException("El nombre del producto no pueden estar vacíos.");
             }
-            if (string.IsNullOrWhiteSpace(insumo.medida))
+            if (string.IsNullOrWhiteSpace(insumo.medidaInsumo))
             {
                 throw new ArgumentException("La medida del producto no pueden estar vacíos.");
             }

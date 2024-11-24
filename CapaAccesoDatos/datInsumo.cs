@@ -36,9 +36,10 @@ namespace CapaAccesoDatos
                         lista.Add(new entInsumo
                         {
                             idInsumo = Convert.ToInt32(dr["idInsumo"]),
-                            nombre = dr["nombre"].ToString(),
-                            medida = dr["medida"].ToString(),
-                            estado = Convert.ToBoolean(dr["estado"])
+                            nombreInsumo = dr["nombreInsumo"].ToString(),
+                            cantidadInsumo = Convert.ToInt32(dr["cantidadInsumo"]),
+                            medidaInsumo = dr["medidaInsumo"].ToString(),
+                            estadoInsumo = Convert.ToBoolean(dr["estadoInsumo"])
                         });
                     }
                 }
@@ -65,9 +66,9 @@ namespace CapaAccesoDatos
                         CommandType = CommandType.StoredProcedure
                     };
 
-                    cmd.Parameters.AddWithValue("@nombre", insumo.nombre);
-                    cmd.Parameters.AddWithValue("@medida", insumo.medida);
-                    cmd.Parameters.AddWithValue("@estado", insumo.estado);
+                    cmd.Parameters.AddWithValue("@nombre", insumo.nombreInsumo);
+                    cmd.Parameters.AddWithValue("@medida", insumo.medidaInsumo);
+                    cmd.Parameters.AddWithValue("@estado", insumo.estadoInsumo);
 
                     cn.Open();
                     cmd.ExecuteNonQuery();
@@ -94,8 +95,8 @@ namespace CapaAccesoDatos
                     };
 
                     cmd.Parameters.AddWithValue("@idInsumo", insumo.idInsumo);
-                    cmd.Parameters.AddWithValue("@nombre", insumo.nombre);
-                    cmd.Parameters.AddWithValue("@medida", insumo.medida);
+                    cmd.Parameters.AddWithValue("@nombre", insumo.nombreInsumo);
+                    cmd.Parameters.AddWithValue("@medida", insumo.medidaInsumo);
 
                     cn.Open();
                     cmd.ExecuteNonQuery();

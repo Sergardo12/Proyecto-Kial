@@ -9,8 +9,8 @@ namespace CapaEntidad
     public class entProducto
     {
         public int idProducto { get; set; }
-        public string nombre { get; set; }
-        public decimal precio { get; set; }
-        public bool estado { get; set; } // Para saber si está habilitado o inhabilitado
+        public string nombreProducto { get; set; }
+        public decimal precioProducto { get; set; }
+        public bool estadoProducto { get; set; } // Para saber si está habilitado o inhabilitado
     }
 }

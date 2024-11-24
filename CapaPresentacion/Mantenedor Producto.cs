@@ -48,7 +48,7 @@ namespace CapaPresentacion
             try
             {
                 dtgvProducto.DataSource = logProducto.Instancia.ListarProductos();
-                dtgvProducto.Columns["estado"].Visible = true; // Ocultar columna si no es necesaria
+                dtgvProducto.Columns["estadoProducto"].Visible = true; // Ocultar columna si no es necesaria
             }
             catch (Exception ex)
             {
@@ -60,16 +60,8 @@ namespace CapaPresentacion
         {
             txtIdProducto.Clear();
             txtNombreProducto.Clear();
-            txtCantidadProducto.Clear();
             txtPrecioProducto.Clear();
             chkEstadoProducto.Checked = true;
-        }
-
-
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCancelarCliente_Click(object sender, EventArgs e)
@@ -109,8 +101,8 @@ namespace CapaPresentacion
                 entProducto productoModificado = new entProducto
                 {
                     idProducto = int.Parse(txtIdProducto.Text),
-                    nombre = txtNombreProducto.Text.Trim(),
-                    precio = decimal.Parse(txtPrecioProducto.Text)
+                    nombreProducto = txtNombreProducto.Text.Trim(),
+                    precioProducto = decimal.Parse(txtPrecioProducto.Text)
                 };
 
                 logProducto.Instancia.ModificarProducto(productoModificado);
@@ -130,9 +122,9 @@ namespace CapaPresentacion
             {
                 entProducto producto = new entProducto
                 {
-                    nombre = txtNombreProducto.Text.Trim(),
-                    precio = decimal.Parse(txtPrecioProducto.Text.Trim()),
-                    estado = true // Estado activo por defecto
+                    nombreProducto = txtNombreProducto.Text.Trim(),
+                    precioProducto = decimal.Parse(txtPrecioProducto.Text.Trim()),
+                    estadoProducto = true // Estado activo por defecto
                 };
 
                 logProducto.Instancia.InsertarProducto(producto);
