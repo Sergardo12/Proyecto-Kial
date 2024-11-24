@@ -39,13 +39,13 @@
             this.dtgvInsumo = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtUnidadMedidaInsumo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.chkEstadoInsumo = new System.Windows.Forms.CheckBox();
             this.txtNombreInsumo = new System.Windows.Forms.TextBox();
             this.txtIdInsumo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtUnidadMedidaInsumo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pcbxFondoMadera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvInsumo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -191,6 +191,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insumo:";
             // 
+            // txtUnidadMedidaInsumo
+            // 
+            this.txtUnidadMedidaInsumo.Location = new System.Drawing.Point(185, 135);
+            this.txtUnidadMedidaInsumo.Name = "txtUnidadMedidaInsumo";
+            this.txtUnidadMedidaInsumo.Size = new System.Drawing.Size(183, 26);
+            this.txtUnidadMedidaInsumo.TabIndex = 61;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(38, 135);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(142, 20);
+            this.label4.TabIndex = 60;
+            this.label4.Text = "Unidad de medida:";
+            // 
             // chkEstadoInsumo
             // 
             this.chkEstadoInsumo.AutoSize = true;
@@ -236,23 +253,6 @@
             this.label2.Size = new System.Drawing.Size(30, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID:";
-            // 
-            // txtUnidadMedidaInsumo
-            // 
-            this.txtUnidadMedidaInsumo.Location = new System.Drawing.Point(185, 135);
-            this.txtUnidadMedidaInsumo.Name = "txtUnidadMedidaInsumo";
-            this.txtUnidadMedidaInsumo.Size = new System.Drawing.Size(183, 26);
-            this.txtUnidadMedidaInsumo.TabIndex = 61;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 135);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 20);
-            this.label4.TabIndex = 60;
-            this.label4.Text = "Unidad de medida:";
             // 
             // Mantenedor_Insumos
             // 
