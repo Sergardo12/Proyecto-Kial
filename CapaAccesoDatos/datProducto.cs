@@ -37,7 +37,6 @@ namespace CapaAccesoDatos
                         {
                             idProducto = Convert.ToInt32(dr["idProducto"]),
                             nombre = dr["nombre"].ToString(),
-                            cantidad = dr["cantidad"].ToString(), // Ahora como texto
                             precio = Convert.ToDecimal(dr["precio"]),
                             estado = Convert.ToBoolean(dr["estado"])
                         });
@@ -67,7 +66,6 @@ namespace CapaAccesoDatos
                     };
 
                     cmd.Parameters.AddWithValue("@nombre", producto.nombre);
-                    cmd.Parameters.AddWithValue("@cantidad", producto.cantidad);
                     cmd.Parameters.AddWithValue("@precio", producto.precio);
                     cmd.Parameters.AddWithValue("@estado", producto.estado);
 
@@ -97,7 +95,6 @@ namespace CapaAccesoDatos
 
                     cmd.Parameters.AddWithValue("@idProducto", producto.idProducto);
                     cmd.Parameters.AddWithValue("@nombre", producto.nombre);
-                    cmd.Parameters.AddWithValue("@cantidad", producto.cantidad);
                     cmd.Parameters.AddWithValue("@precio", producto.precio);
 
                     cn.Open();

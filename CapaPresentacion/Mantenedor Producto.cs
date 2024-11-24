@@ -54,7 +54,6 @@ namespace CapaPresentacion
         {
             txtIdProducto.Clear();
             txtNombreProducto.Clear();
-            txtCantidadProducto.Clear();
             txtPrecioProducto.Clear();
             chkEstadoProducto.Checked = true;
         }
@@ -104,7 +103,6 @@ namespace CapaPresentacion
                 {
                     idProducto = int.Parse(txtIdProducto.Text),
                     nombre = txtNombreProducto.Text.Trim(),
-                    cantidad = txtCantidadProducto.Text.Trim(),
                     precio = decimal.Parse(txtPrecioProducto.Text)
                 };
 
@@ -126,7 +124,6 @@ namespace CapaPresentacion
                 entProducto producto = new entProducto
                 {
                     nombre = txtNombreProducto.Text.Trim(),
-                    cantidad = txtCantidadProducto.Text.Trim(), // Texto
                     precio = decimal.Parse(txtPrecioProducto.Text.Trim()),
                     estado = true // Estado activo por defecto
                 };

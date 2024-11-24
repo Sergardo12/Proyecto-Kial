@@ -58,6 +58,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mantenedor Insumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedor Insumos.Designer.cs">
+      <DependentUpon>Mantenedor Insumos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenedor Producto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor Insumos.resx">
+      <DependentUpon>Mantenedor Insumos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor Producto.resx">
       <DependentUpon>Mantenedor Producto.cs</DependentUpon>

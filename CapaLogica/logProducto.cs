@@ -28,9 +28,9 @@ namespace CapaLogica
         // Insertar producto
         public void InsertarProducto(entProducto producto)
         {
-            if (string.IsNullOrWhiteSpace(producto.nombre) || string.IsNullOrWhiteSpace(producto.cantidad))
+            if (string.IsNullOrWhiteSpace(producto.nombre))
             {
-                throw new ArgumentException("El nombre y la cantidad del producto no pueden estar vacíos.");
+                throw new ArgumentException("El nombre del producto no pueden estar vacíos.");
             }
 
             if (producto.precio <= 0)

@@ -39,15 +39,13 @@
             this.dtgvProducto = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkEstadoProducto = new System.Windows.Forms.CheckBox();
             this.txtPrecioProducto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtCantidadProducto = new System.Windows.Forms.TextBox();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.chkEstadoProducto = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbxFondoMadera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProducto)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -180,26 +178,34 @@
             this.groupBox1.Controls.Add(this.chkEstadoProducto);
             this.groupBox1.Controls.Add(this.txtPrecioProducto);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtCantidadProducto);
             this.groupBox1.Controls.Add(this.txtNombreProducto);
             this.groupBox1.Controls.Add(this.txtIdProducto);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(35, 88);
+            this.groupBox1.Location = new System.Drawing.Point(36, 105);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(442, 266);
+            this.groupBox1.Size = new System.Drawing.Size(442, 221);
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Producto:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // chkEstadoProducto
+            // 
+            this.chkEstadoProducto.AutoSize = true;
+            this.chkEstadoProducto.Location = new System.Drawing.Point(183, 176);
+            this.chkEstadoProducto.Name = "chkEstadoProducto";
+            this.chkEstadoProducto.Size = new System.Drawing.Size(79, 24);
+            this.chkEstadoProducto.TabIndex = 59;
+            this.chkEstadoProducto.Text = "Estado";
+            this.chkEstadoProducto.UseVisualStyleBackColor = true;
+            // 
             // txtPrecioProducto
             // 
-            this.txtPrecioProducto.Location = new System.Drawing.Point(184, 176);
+            this.txtPrecioProducto.Location = new System.Drawing.Point(184, 132);
             this.txtPrecioProducto.Name = "txtPrecioProducto";
             this.txtPrecioProducto.Size = new System.Drawing.Size(183, 26);
             this.txtPrecioProducto.TabIndex = 58;
@@ -207,24 +213,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(122, 179);
+            this.label7.Location = new System.Drawing.Point(122, 135);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 20);
             this.label7.TabIndex = 57;
             this.label7.Text = "Precio:";
             // 
-            // txtCantidadProducto
-            // 
-            this.txtCantidadProducto.Location = new System.Drawing.Point(184, 137);
-            this.txtCantidadProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCantidadProducto.Name = "txtCantidadProducto";
-            this.txtCantidadProducto.Size = new System.Drawing.Size(183, 26);
-            this.txtCantidadProducto.TabIndex = 7;
-            // 
             // txtNombreProducto
             // 
-            this.txtNombreProducto.Location = new System.Drawing.Point(184, 92);
+            this.txtNombreProducto.Location = new System.Drawing.Point(184, 88);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(183, 26);
@@ -232,26 +230,16 @@
             // 
             // txtIdProducto
             // 
-            this.txtIdProducto.Location = new System.Drawing.Point(184, 50);
+            this.txtIdProducto.Location = new System.Drawing.Point(184, 46);
             this.txtIdProducto.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(183, 26);
             this.txtIdProducto.TabIndex = 5;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(103, 140);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 20);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Cantidad:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 95);
+            this.label3.Location = new System.Drawing.Point(111, 91);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 20);
@@ -261,22 +249,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(150, 53);
+            this.label2.Location = new System.Drawing.Point(150, 49);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID:";
-            // 
-            // chkEstadoProducto
-            // 
-            this.chkEstadoProducto.AutoSize = true;
-            this.chkEstadoProducto.Location = new System.Drawing.Point(180, 223);
-            this.chkEstadoProducto.Name = "chkEstadoProducto";
-            this.chkEstadoProducto.Size = new System.Drawing.Size(79, 24);
-            this.chkEstadoProducto.TabIndex = 59;
-            this.chkEstadoProducto.Text = "Estado";
-            this.chkEstadoProducto.UseVisualStyleBackColor = true;
             // 
             // Mantenedor_Producto
             // 
@@ -319,10 +297,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtPrecioProducto;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtCantidadProducto;
         private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.TextBox txtIdProducto;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkEstadoProducto;
