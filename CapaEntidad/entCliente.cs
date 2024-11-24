@@ -9,7 +9,7 @@ namespace CapaEntidad
     public class entCliente
     {
         public int idCliente { get; set; }
-        public string razonSocial { get; set; }
+        public string nombreCliente { get; set; }
         public int dni { get; set; }
         public int numero { get; set; } 
         public string correo { get; set; }

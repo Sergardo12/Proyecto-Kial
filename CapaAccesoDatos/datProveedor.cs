@@ -47,10 +47,9 @@ namespace CapaAccesoDatos
                         entProveedor proveedor = new entProveedor
                         {
                             idProveedor = Convert.ToInt32(dr["idProveedor"]),
-                            nombre = dr["nombre"].ToString(),
-                            telefono = Convert.ToInt32(dr["telefono"]),
-                            ruc = Convert.ToInt32(dr["ruc"]),
-                            direccion = dr["direccion"].ToString(),
+                            nombreProveedor = dr["nombreProveedor"].ToString(),
+                            rucProveedor = Convert.ToInt32(dr["rucProveedor"]),
+                            direccionProveedor = dr["direccionProveedor"].ToString(),
                             fecRegProveedor = Convert.ToDateTime(dr["fecRegProveedor"]),
                             estProveedor = Convert.ToBoolean(dr["estProveedor"])
                         };
@@ -81,10 +80,9 @@ namespace CapaAccesoDatos
                         CommandType = CommandType.StoredProcedure
                     };
 
-                    cmd.Parameters.AddWithValue("@nombre", proveedor.nombre);
-                    cmd.Parameters.AddWithValue("@telefono", proveedor.telefono);
-                    cmd.Parameters.AddWithValue("@ruc", proveedor.ruc);
-                    cmd.Parameters.AddWithValue("@direccion", proveedor.direccion);
+                    cmd.Parameters.AddWithValue("@nombreProveedor", proveedor.nombreProveedor);
+                    cmd.Parameters.AddWithValue("@rucProveedor", proveedor.rucProveedor);
+                    cmd.Parameters.AddWithValue("@direccionProveedor", proveedor.direccionProveedor);
                     cmd.Parameters.AddWithValue("@fecRegProveedor", proveedor.fecRegProveedor);
                     cmd.Parameters.AddWithValue("@estProveedor", proveedor.estProveedor);
 
@@ -116,10 +114,9 @@ namespace CapaAccesoDatos
                     };
 
                     cmd.Parameters.AddWithValue("@idProveedor", proveedor.idProveedor);
-                    cmd.Parameters.AddWithValue("@nombre", proveedor.nombre);
-                    cmd.Parameters.AddWithValue("@telefono", proveedor.telefono);
-                    cmd.Parameters.AddWithValue("@ruc", proveedor.ruc);
-                    cmd.Parameters.AddWithValue("@direccion", proveedor.direccion);
+                    cmd.Parameters.AddWithValue("@nombreProveedor", proveedor.nombreProveedor);
+                    cmd.Parameters.AddWithValue("@rucProveedor", proveedor.rucProveedor);
+                    cmd.Parameters.AddWithValue("@direccionProveedor", proveedor.direccionProveedor);
                     cmd.Parameters.AddWithValue("@fecRegProveedor", proveedor.fecRegProveedor);
                     cmd.Parameters.AddWithValue("@estProveedor", proveedor.estProveedor);
 

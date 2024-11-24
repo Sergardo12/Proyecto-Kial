@@ -30,11 +30,10 @@ namespace CapaLogica
 
         public void InsertarProveedor(entProveedor proveedor)
         {
-            if (string.IsNullOrEmpty(proveedor.nombre))
+            if (string.IsNullOrEmpty(proveedor.nombreProveedor))
                 throw new ArgumentException("El nombre del proveedor no puede estar vacío.");
-            if (proveedor.telefono <= 0)
-                throw new ArgumentException("El teléfono debe ser un número válido.");
-            if (proveedor.ruc <= 0)
+
+            if (proveedor.rucProveedor <= 0)
                 throw new ArgumentException("El RUC debe ser un número válido.");
 
             datProveedor.Instancia.InsertarProveedor(proveedor);
@@ -44,7 +43,7 @@ namespace CapaLogica
         {
             if (proveedor.idProveedor <= 0)
                 throw new ArgumentException("El ID del proveedor no es válido.");
-            if (string.IsNullOrEmpty(proveedor.nombre))
+            if (string.IsNullOrEmpty(proveedor.nombreProveedor))
                 throw new ArgumentException("El nombre del proveedor no puede estar vacío.");
 
             datProveedor.Instancia.EditarProveedor(proveedor);

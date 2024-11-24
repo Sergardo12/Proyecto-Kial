@@ -43,7 +43,7 @@ namespace CapaAccesoDatos
                             entCliente cliente = new entCliente
                             {
                                 idCliente = Convert.ToInt32(dr["idCliente"]),
-                                razonSocial = dr["razonSocial"].ToString(),
+                                nombreCliente = dr["nombreCliente"].ToString(),
                                 dni = Convert.ToInt32(dr["dni"]),
                                 numero = Convert.ToInt32(dr["numero"]),
                                 correo = dr["correo"].ToString(),
@@ -78,7 +78,7 @@ namespace CapaAccesoDatos
                     };
 
                     // Agregar parámetros necesarios
-                    cmd.Parameters.AddWithValue("@razonSocial", cliente.razonSocial);
+                    cmd.Parameters.AddWithValue("@nombreCliente", cliente.nombreCliente);
                     cmd.Parameters.AddWithValue("@dni", cliente.dni);
                     cmd.Parameters.AddWithValue("@numero", cliente.numero);
                     cmd.Parameters.AddWithValue("@correo", cliente.correo);
@@ -113,7 +113,7 @@ namespace CapaAccesoDatos
 
                     // Agregar parámetros necesarios
                     cmd.Parameters.AddWithValue("@idCliente", cliente.idCliente);
-                    cmd.Parameters.AddWithValue("@razonSocial", cliente.razonSocial);
+                    cmd.Parameters.AddWithValue("@nombreCliente", cliente.nombreCliente);
                     cmd.Parameters.AddWithValue("@dni", cliente.dni);
                     cmd.Parameters.AddWithValue("@numero", cliente.numero);
                     cmd.Parameters.AddWithValue("@correo", cliente.correo);
