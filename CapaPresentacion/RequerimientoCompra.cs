@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,18 +19,15 @@ namespace CapaPresentacion
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
         public RequerimientoCompra()
         {
             InitializeComponent();
             // Suscribimos el evento de cambio de celda en dtvinsumo
-            dtgvInsumo.CellValueChanged += dtgvInsumo_CellValueChanged;
+            dtgvRequerimientoInsumo.CellValueChanged += dtgvRequerimientoInsumo_CellValueChanged;
         }
-        // Evento para detectar cambios en dtvinsumo
-        private void dtgvInsumo_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            cambiosRealizados = true;
-        }
-
+      
         // Método auxiliar para abrir una única instancia de un formulario
         private void AbrirFormularioUnico(Type tipoFormulario)
         {
@@ -52,11 +50,6 @@ namespace CapaPresentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void pcbxFondoMadera_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnRegresarRequrimientoCompra_Click(object sender, EventArgs e)
@@ -94,5 +87,26 @@ namespace CapaPresentacion
             }
         }
 
+
+        // Evento para detectar cambios en dtvinsumo
+        private void dtgvRequerimientoInsumo_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            cambiosRealizados = true;
+        }
+
+        private void btnAgregarRequerimientoInsumo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entRequerimientoInsumo requerimiento = new entRequerimientoInsumo
+                {
+                    //nombreRequrmiento = 
+                };
+            }
+            catch
+            {
+
+            }
+        }
     }
 }
