@@ -17,7 +17,23 @@ namespace CapaPresentacion
         {
             InitializeComponent();
             chkEstadoInsumo.Checked = true; // Estado activo por defecto
+            InicializarComboBox(); // Configurar ComboBox
             CargarProductos(); // Cargar datos al iniciar el formulario
+            txtIdInsumo.ReadOnly = true; // Deshabilitar ID por defecto
+        }
+
+        private void InicializarComboBox()
+        {
+            // Evitar duplicados asegurándonos de limpiar primero
+            cmbMedida.Items.Clear();
+
+            // Agregar opciones al ComboBox una sola vez
+            cmbMedida.Items.Add("Unitario");
+            cmbMedida.Items.Add("Kg");
+            cmbMedida.Items.Add("Lt");
+
+            cmbMedida.DropDownStyle = ComboBoxStyle.DropDownList; // Solo selección
+            cmbMedida.SelectedIndex = 0; // Selección por defecto
         }
 
         private void CargarProductos()
@@ -37,8 +53,9 @@ namespace CapaPresentacion
         {
             txtIdInsumo.Clear();
             txtNombreInsumo.Clear();
-            txtUnidadMedidaInsumo.Clear();
+            cmbMedida.SelectedIndex = 0; // Restablece la selección por defecto
             chkEstadoInsumo.Checked = true;
+            txtIdInsumo.ReadOnly = true; // Deshabilitar nuevamente después de la operación
         }
 
         private void btnAgregarInsumo_Click(object sender, EventArgs e)
@@ -48,7 +65,7 @@ namespace CapaPresentacion
                 entInsumo insumo = new entInsumo
                 {
                     nombreInsumo = txtNombreInsumo.Text.Trim(),
-                    medidaInsumo = txtUnidadMedidaInsumo.Text.Trim(),
+                    medidaInsumo = cmbMedida.SelectedItem.ToString(), // Obtiene el valor seleccionado del ComboBox
                     estadoInsumo = chkEstadoInsumo.Checked // Toma el valor del CheckBox
                 };
 
@@ -67,6 +84,9 @@ namespace CapaPresentacion
         {
             try
             {
+                // Habilitar el ID temporalmente para capturarlo
+                txtIdInsumo.ReadOnly = false;
+
                 if (string.IsNullOrWhiteSpace(txtIdInsumo.Text))
                 {
                     MessageBox.Show("Debe ingresar un ID válido.");
@@ -75,10 +95,10 @@ namespace CapaPresentacion
 
                 entInsumo insumoModificado = new entInsumo
                 {
-                    idInsumo = int.Parse(txtIdInsumo.Text),
+                    idInsumo = int.Parse(txtIdInsumo.Text), // ID del insumo
                     nombreInsumo = txtNombreInsumo.Text.Trim(),
-                    medidaInsumo = txtUnidadMedidaInsumo.Text.Trim(),
-                    estadoInsumo = chkEstadoInsumo.Checked // Toma el valor del CheckBox
+                    medidaInsumo = cmbMedida.SelectedItem.ToString(), // Valor del ComboBox
+                    estadoInsumo = chkEstadoInsumo.Checked // Valor del CheckBox
                 };
 
                 logInsumo.Instancia.ModificarInsumo(insumoModificado);
@@ -96,6 +116,9 @@ namespace CapaPresentacion
         {
             try
             {
+                // Habilitar el ID temporalmente para capturarlo
+                txtIdInsumo.ReadOnly = false;
+
                 if (string.IsNullOrWhiteSpace(txtIdInsumo.Text))
                 {
                     MessageBox.Show("Debe ingresar un ID válido.");
@@ -111,6 +134,28 @@ namespace CapaPresentacion
             catch (Exception ex)
             {
                 MessageBox.Show("Error al inhabilitar insumo: " + ex.Message);
+            }
+        }
+
+        private void dtgvInsumo_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow filaSeleccionada = dtgvInsumo.Rows[e.RowIndex];
+
+                    txtIdInsumo.Text = filaSeleccionada.Cells["idInsumo"].Value.ToString();
+                    txtNombreInsumo.Text = filaSeleccionada.Cells["nombreInsumo"].Value.ToString();
+                    cmbMedida.SelectedItem = filaSeleccionada.Cells["medidaInsumo"].Value.ToString();
+                    chkEstadoInsumo.Checked = Convert.ToBoolean(filaSeleccionada.Cells["estadoInsumo"].Value);
+
+                    txtIdInsumo.ReadOnly = true; // ID deshabilitado después de seleccionar
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al seleccionar insumo: " + ex.Message);
             }
         }
 
