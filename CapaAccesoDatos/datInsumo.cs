@@ -1,11 +1,8 @@
-﻿using CapaEntidad;
+﻿using CapaEntidad; // Asegúrate de que esta referencia esté bien configurada
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaAccesoDatos
 {
@@ -14,8 +11,8 @@ namespace CapaAccesoDatos
         private static readonly datInsumo _instancia = new datInsumo();
         public static datInsumo Instancia => _instancia;
 
-        // Listar productos
-        public List<entInsumo> ListarInsumo()
+        // Método para listar insumos activos
+        public List<entInsumo> ListarInsumos()
         {
             List<entInsumo> lista = new List<entInsumo>();
             SqlCommand cmd = null;
@@ -24,7 +21,7 @@ namespace CapaAccesoDatos
             {
                 using (SqlConnection cn = Conexion.Instancia.Conectar())
                 {
-                    cmd = new SqlCommand("spListarInsumo", cn)
+                    cmd = new SqlCommand("spListarInsumos", cn) // Procedimiento correcto
                     {
                         CommandType = CommandType.StoredProcedure
                     };
@@ -37,7 +34,6 @@ namespace CapaAccesoDatos
                         {
                             idInsumo = Convert.ToInt32(dr["idInsumo"]),
                             nombreInsumo = dr["nombreInsumo"].ToString(),
-                            cantidadInsumo = Convert.ToInt32(dr["cantidadInsumo"]),
                             medidaInsumo = dr["medidaInsumo"].ToString(),
                             estadoInsumo = Convert.ToBoolean(dr["estadoInsumo"])
                         });
@@ -52,7 +48,7 @@ namespace CapaAccesoDatos
             return lista;
         }
 
-        // Insertar producto
+        // Método para insertar un nuevo insumo
         public void InsertarInsumo(entInsumo insumo)
         {
             SqlCommand cmd = null;
@@ -66,9 +62,9 @@ namespace CapaAccesoDatos
                         CommandType = CommandType.StoredProcedure
                     };
 
-                    cmd.Parameters.AddWithValue("@nombre", insumo.nombreInsumo);
-                    cmd.Parameters.AddWithValue("@medida", insumo.medidaInsumo);
-                    cmd.Parameters.AddWithValue("@estado", insumo.estadoInsumo);
+                    cmd.Parameters.AddWithValue("@nombreInsumo", insumo.nombreInsumo); // Nombre correcto
+                    cmd.Parameters.AddWithValue("@medidaInsumo", insumo.medidaInsumo); // Medida correcta
+                    cmd.Parameters.AddWithValue("@estadoInsumo", insumo.estadoInsumo); // Estado correcto
 
                     cn.Open();
                     cmd.ExecuteNonQuery();
@@ -80,7 +76,7 @@ namespace CapaAccesoDatos
             }
         }
 
-        // Modificar producto
+        // Método para modificar un insumo existente
         public void ModificarInsumo(entInsumo insumo)
         {
             SqlCommand cmd = null;
@@ -89,14 +85,15 @@ namespace CapaAccesoDatos
             {
                 using (SqlConnection cn = Conexion.Instancia.Conectar())
                 {
-                    cmd = new SqlCommand("spModificarInsumo", cn)
+                    cmd = new SqlCommand("spActualizarInsumo", cn) // Procedimiento correcto
                     {
                         CommandType = CommandType.StoredProcedure
                     };
 
                     cmd.Parameters.AddWithValue("@idInsumo", insumo.idInsumo);
-                    cmd.Parameters.AddWithValue("@nombre", insumo.nombreInsumo);
-                    cmd.Parameters.AddWithValue("@medida", insumo.medidaInsumo);
+                    cmd.Parameters.AddWithValue("@nombreInsumo", insumo.nombreInsumo); // Nombre correcto
+                    cmd.Parameters.AddWithValue("@medidaInsumo", insumo.medidaInsumo); // Medida correcta
+                    cmd.Parameters.AddWithValue("@estadoInsumo", insumo.estadoInsumo); // Estado correcto
 
                     cn.Open();
                     cmd.ExecuteNonQuery();
@@ -108,7 +105,7 @@ namespace CapaAccesoDatos
             }
         }
 
-        // Inhabilitar producto
+        // Método para inhabilitar un insumo
         public void InhabilitarInsumo(int idInsumo)
         {
             SqlCommand cmd = null;
@@ -117,12 +114,12 @@ namespace CapaAccesoDatos
             {
                 using (SqlConnection cn = Conexion.Instancia.Conectar())
                 {
-                    cmd = new SqlCommand("spInhabilitarInsumo", cn)
+                    cmd = new SqlCommand("spInhabilitarInsumo", cn) // Procedimiento correcto
                     {
                         CommandType = CommandType.StoredProcedure
                     };
 
-                    cmd.Parameters.AddWithValue("@idInsumo", idInsumo);
+                    cmd.Parameters.AddWithValue("@idInsumo", idInsumo); // Parámetro correcto
 
                     cn.Open();
                     cmd.ExecuteNonQuery();

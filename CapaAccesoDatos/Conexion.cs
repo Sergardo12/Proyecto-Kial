@@ -11,7 +11,7 @@ namespace CapaAccesoDatos
     {
         private static readonly Conexion _instancia = new Conexion();
 
-        private readonly string connectionString = "Data Source=.; Initial Catalog=KialChicken; Integrated Security=true";
+        private readonly string connectionString = "Data Source=DESKTOP-G1DSF58\\SQLEXPRESS; user=sa; password=javv1924; Initial Catalog=KialChicken; Integrated Security=true";
 
         private Conexion() { }
 

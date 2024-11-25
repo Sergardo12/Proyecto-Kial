@@ -76,7 +76,6 @@
             this.btnListoInsumo.TabIndex = 67;
             this.btnListoInsumo.Text = "Listo";
             this.btnListoInsumo.UseVisualStyleBackColor = false;
-            this.btnListoInsumo.Click += new System.EventHandler(this.btnListoInsumo_Click);
             // 
             // btnCancelarInsumo
             // 
@@ -90,7 +89,6 @@
             this.btnCancelarInsumo.TabIndex = 66;
             this.btnCancelarInsumo.Text = "Cancelar";
             this.btnCancelarInsumo.UseVisualStyleBackColor = false;
-            this.btnCancelarInsumo.Click += new System.EventHandler(this.btnCancelarInsumo_Click);
             // 
             // btnRegresarInsumo
             // 
@@ -104,7 +102,6 @@
             this.btnRegresarInsumo.TabIndex = 65;
             this.btnRegresarInsumo.Text = "Regresar";
             this.btnRegresarInsumo.UseVisualStyleBackColor = false;
-            this.btnRegresarInsumo.Click += new System.EventHandler(this.btnRegresarInsumo_Click);
             // 
             // btnInhabilitarInsumo
             // 
