@@ -17,3 +17,7 @@ DocumentLayout.backup.json
 # Build results
 [Bb]in/
 [Oo]bj/
+
+#La conexion hacerlo sin seguimiento
+CapaAccesoDatos/Conexion.cs
+
