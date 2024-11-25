@@ -47,7 +47,7 @@ namespace CapaPresentacion
         {
             if (cmbProducto.SelectedItem is entProducto producto)
             {
-                txtPrecioUnitario.Text = producto.precio.ToString("F2");
+                txtPrecioUnitario.Text = producto.precioProducto.ToString("F2");
             }
         }
 

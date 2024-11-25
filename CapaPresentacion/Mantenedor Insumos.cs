@@ -90,9 +90,9 @@ namespace CapaPresentacion
             {
                 entInsumo insumo = new entInsumo
                 {
-                    nombre = txtNombreInsumo.Text.Trim(),
-                    medida = txtUnidadMedidaInsumo.Text.Trim(),
-                    estado = true // Estado activo por defecto
+                    nombreInsumo = txtNombreInsumo.Text.Trim(),
+                    medidaInsumo = txtUnidadMedidaInsumo.Text.Trim(),
+                    estadoInsumo = true // Estado activo por defecto
                 };
 
                 logInsumo.Instancia.InsertarInsumo(insumo);
@@ -113,8 +113,8 @@ namespace CapaPresentacion
                 entInsumo insumoModificado = new entInsumo
                 {
                     idInsumo = int.Parse(txtIdInsumo.Text),
-                    nombre = txtNombreInsumo.Text.Trim(),
-                    medida = txtUnidadMedidaInsumo.Text.Trim(),
+                    nombreInsumo = txtNombreInsumo.Text.Trim(),
+                    medidaInsumo = txtUnidadMedidaInsumo.Text.Trim(),
                 };
 
                 logInsumo.Instancia.ModificarInsumo(insumoModificado);
