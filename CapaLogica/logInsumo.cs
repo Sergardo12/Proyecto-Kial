@@ -103,5 +103,9 @@ namespace CapaLogica
                 throw new Exception("Error al inhabilitar insumo: " + ex.Message);
             }
         }
+        public entInsumo ObtenerInsumoPorNombre(string nombreInsumo)
+        {
+            return datInsumo.Instancia.ObtenerInsumoPorNombre(nombreInsumo);
+        }
     }
 }

@@ -130,5 +130,54 @@ namespace CapaAccesoDatos
                 throw new Exception("Error al inhabilitar insumo: " + ex.Message);
             }
         }
+
+        //Obtener un insumo por su nombre
+
+            // Método para obtener un insumo por nombre
+            public entInsumo ObtenerInsumoPorNombre(string nombreInsumo)
+            {
+                SqlCommand cmd = null;
+                SqlDataReader dr = null;
+                entInsumo insumo = null;
+
+                try
+                {
+                    using (SqlConnection cn = Conexion.Instancia.Conectar())
+                    {
+                        cmd = new SqlCommand("spObtenerInsumoPorNombre", cn)
+                        {
+                            CommandType = CommandType.StoredProcedure
+                        };
+                        cmd.Parameters.AddWithValue("@nombreInsumo", nombreInsumo);
+
+                        cn.Open();
+                        dr = cmd.ExecuteReader();
+
+                        if (dr.Read())
+                        {
+                            insumo = new entInsumo
+                            {
+                                idInsumo = Convert.ToInt32(dr["idInsumo"]),
+                                nombreInsumo = dr["nombreInsumo"].ToString(),
+                                medidaInsumo = dr["medidaInsumo"].ToString(),
+                                cantidadInsumo = Convert.ToInt32(dr["cantidadInsumo"]),
+                                estadoInsumo = Convert.ToBoolean(dr["estadoInsumo"])
+                            };
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error al obtener el insumo: " + ex.Message);
+                }
+                finally
+                {
+                    if (dr != null) dr.Close();
+                }
+
+                return insumo;
+            }
+       
+
     }
 }

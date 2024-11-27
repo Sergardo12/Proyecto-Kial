@@ -11,6 +11,12 @@ namespace CapaEntidad
         public int idRequerimientoInsumo {  get; set; }
         public int idInsumoReq {  get; set; }
 
+        // Campo de estado como booleano (bit en la base de datos)
+        public bool estadoRequerimientoInsumo { get; set; }
+
+        // ID provisional (si es necesario en tu lógica)
+        public int? idProvisional { get; set; }
+
         // Relación con entInsumo para acceder a los datos referenciados
         public entInsumo Insumo { get; set; }
     }

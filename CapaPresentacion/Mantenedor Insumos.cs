@@ -124,6 +124,8 @@ namespace CapaPresentacion
                     MessageBox.Show("Debe ingresar un ID válido.");
                     return;
                 }
+                var confirm = MessageBox.Show("¿Está seguro de que desea inhabilitar este insumo?", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm != DialogResult.Yes) return;
 
                 int idInsumo = int.Parse(txtIdInsumo.Text);
                 logInsumo.Instancia.InhabilitarInsumo(idInsumo);
